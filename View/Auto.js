@@ -1,23 +1,26 @@
 
 export default class Auto{
+
     #kepAdat = {}
     #id
     #szuloElem
 
-    constructor(id, szuloElem){
+    constructor(id, szuloElem, kepAdat){
+        this.#kepAdat = kepAdat
         this.#id = id;
         this.#szuloElem = szuloElem;
 
         this.megjelenit()
-        this.gombElem
+        this.gombElem 
     }
 
     megjelenit(){
-        let txt = `<button class="torol btn btn-secondary"></button>
-        <div class="card col-lg-4"> 
-        <p>${this.#kepAdat}</p>
-        </div>`
-        this.szuloElem.append(txt);
+        let txt = `<div class="card col-lg-4 col-md-6"> <div class="card-body"> 
+            <p class="card-text">${this.#kepAdat.fajta}</p>
+            <p class="card-text">${this.kepAdat.evjarat}</p>
+            <p class="card-text">${this.kepAdat.szin}</p>`
+        txt += `</div>`
+        this.#szuloElem.append(txt);
     }
 
     gombkattint(){

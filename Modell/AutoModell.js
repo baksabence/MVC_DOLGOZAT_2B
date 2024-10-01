@@ -15,8 +15,8 @@ export default class AutoModell{
         return this.#aktElem
     }
 
-    #torolAktElem(index){
-        this.#LISTA[index].splice();
+    torolAktElem(index){
+       // this.#LISTA[index].splice();
         
     }
 

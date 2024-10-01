@@ -1,18 +1,20 @@
 import Auto from "./Auto.js";
 
 export default class Autok{
-    #lista = {}
+    #lista = []
     #szuloElem
 
     constructor(lista, szuloElem){
-        this.#szuloElem = szuloElem
         this.#lista = lista
-
+        this.#szuloElem = szuloElem
+        this.#szuloElem.empty()
+        this.megjelenit();
     }
 
     megjelenit(){
         this.#lista.forEach((elem, index) =>{
-            new Mezo(elem, index, this.#szuloElem)
+            console.log(elem)
+            new Auto(elem, index, this.#szuloElem)
         })
     }
 
